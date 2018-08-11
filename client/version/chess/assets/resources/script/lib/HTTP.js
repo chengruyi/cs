@@ -15,7 +15,7 @@ var HTTP = cc.Class({
         // ...
     },
     statics: {
-        baseURL:"http://127.0.0.1",
+        baseURL:"http://127.0.0.1:8080",
         wsURL : "http://127.0.0.1:9081",
         authorization: null,
         httpGet: function (url , success , error , object) {
