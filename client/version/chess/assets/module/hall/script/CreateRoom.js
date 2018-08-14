@@ -30,6 +30,11 @@ cc.Class({
             cc.beimi.openwin = cc.instantiate(this.roomoption) ;
             cc.beimi.openwin.parent = this.root();
         }
-    }
+    },
+
+    openGame:function(){
+        this.loadding();
+        this.scene("fqzs",this);  
+    },
 
 });
