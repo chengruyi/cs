@@ -1,30 +1,41 @@
 package com.beimi.util.server.handler;
 
+import com.beimi.config.web.model.KeyValueModel;
 import com.corundumstudio.socketio.SocketIOClient;
 
+import java.util.List;
 import java.util.Map;
 
-public class BeiMiClient{
-	private String token ;
-	private String playway ;
-	private String orgi ;
-	private String room ;
-	
-	private long time ;
-	
-	private String userid ;
-	
-	private String session ;
-	
-	
+public class BeiMiClient {
+	private String token;
+	private String playway;
+	private String orgi;
+	private String room;
+
+	private long time;
+
+	private String userid;
+
+	private String session;
+
+	private List<KeyValueModel> data;
+
 	private SocketIOClient client;
 
-	private Map<String,  String> extparams ;
-	
-	public BeiMiClient(){
-		
+	private Map<String, String> extparams;
+
+	public BeiMiClient() {
+
 	}
-	
+
+	public List<KeyValueModel> getData() {
+		return data;
+	}
+
+	public void setData(List<KeyValueModel> data) {
+		this.data = data;
+	}
+
 	public String getSession() {
 		return session;
 	}
@@ -74,9 +85,11 @@ public class BeiMiClient{
 	public void setRoom(String room) {
 		this.room = room;
 	}
+
 	public String getUserid() {
 		return userid;
 	}
+
 	public void setUserid(String userid) {
 		this.userid = userid;
 	}
